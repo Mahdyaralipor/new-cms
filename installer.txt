@@ -1,0 +1,2 @@
+Open cmd and write php -S localhost:7080 -t public
+
