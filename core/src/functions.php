@@ -8,6 +8,11 @@ function render_controller($controller) {
         include(__DIR__ . '/../controller/' . $controller . 'Controller.php');
     }
 }
+function get_render_controller($controller) {
+  
+   include(__DIR__ . '/../controller/' . $controller . 'Controller.php');
+
+}
 function connection (){
 
     $host = 'localhost';

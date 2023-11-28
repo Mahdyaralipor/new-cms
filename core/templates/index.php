@@ -138,8 +138,12 @@
 
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                <!-- image - start -->
-                <a href="single-project"
+       
+                <?php 
+                $sql = connection()->query("SELECT * FROM projects");
+                foreach($sql->fetchAll() as $project){ ?>
+
+                <a href="single-project/<?=$project['id']?>"
                     class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-72">
                     <img src="../assets/images/project-30.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
     
@@ -147,47 +151,11 @@
                         class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
                     </div>
     
-                    <span class="relative mb-4 flex justify-center text-base text-white text-center">پروژه شماره یک</span>
+                    <span class="relative mb-4 flex justify-center text-base text-white text-center"><?=$project['name']?></span>
                 </a>
-                <!-- image - end -->
-    
-                <!-- image - start -->
-                <a href="single-project"
-                    class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-72">
-                    <img src="../assets/images/blog-2.jpg" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
-    
-                    <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-                    </div>
-    
-                    <span class="relative mb-4 flex justify-center text-base text-white text-center">پروژه شماره دو</span>
-                </a>
-                <!-- image - end -->
-    
-                <!-- image - start -->
-                <a href="single-project"
-                    class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-72">
-                    <img src="../assets/images/project-31.jpg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
-    
-                    <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-                    </div>
-    
-                    <span class="relative mb-4 flex justify-center text-base text-white text-center">پروژه شماره سه</span>
-                </a>
-                <!-- image - end -->
-    
-                <!-- image - start -->
-                <a href="single-project" class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-72">
-                    <img src="../assets/images/blog-4.jpg" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
-    
-                    <div
-                        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-                    </div>
-    
-                    <span class="relative mb-4 flex justify-center text-base text-white text-center">پروژه شماره 4</span>
-                </a>
-                <!-- image - end -->
+
+                <?php } ?>
+            
             </div>
            
         </div>

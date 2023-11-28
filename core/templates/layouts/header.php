@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <body class="font-YekanBakh-Regular text-sm bg-[#f5f1e4]">
@@ -92,9 +93,9 @@
                 </div>
               </div>
                 <div class="border bg-stone-900 text-orange-200 hover:bg-orange-200 hover:text-stone-900 duration-300 rounded-full">
-                    <a href="login" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
-                </div>
-        
+                      <a href="<?= isset($_SESSION['USER-LOGIN']) ? "/logout" :  "/login"?>" id="01" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular"><?=isset($_SESSION['USER-LOGIN']) ? $_SESSION['USER-DETAIL']['username'] . " | خروج" : "ورود | ثبت نام"?></a>
+                  </div>
+      
             </div>
         </div>
     </section>

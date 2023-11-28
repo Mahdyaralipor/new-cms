@@ -3,58 +3,63 @@ require_once 'functions.php';
 function route_request() {
     $uri = $_SERVER['REQUEST_URI'];
     $uri = explode('?', $uri)[0];
+    $uri = explode('/', $uri)[1];
+
     switch ($uri) {
-        case '/':
+        case '':
             render_template('index');
             break;
-        case '/about-us':
+        case 'about-us':
             render_template('about-us');
             break;
-        case '/service':
+        case 'service':
             render_template('service');
             break;            
-        case '/contact-us':
+        case 'contact-us':
             render_controller('contact-us');
             render_template('contact-us');
             break;
-        case '/404':
+        case '404':
             render_template('404');
             break;
-        case '/single-project':
-            render_controller('single-project');
+        case 'single-project':
+            render_controller('store-single-project');
             render_template('single-project');
             break;
-        case '/single-page':
+        case 'single-page':
             render_controller('single-page');
             render_template('single-page');
             break;
-        case '/sign-up':
+        case 'sign-up':
             render_controller('sign-up');
             render_template('sign-up');
             break;
-        case '/login':
+        case 'login':
             render_controller('login');
             render_template('login');
             break;
-        case '/lost-password':
+        case 'lost-password':
             render_controller('lost-password');
             render_template('lost-password');
             break;
-        case '/manager':
+        case 'manager':
             render_template('manager');
             break;
-            case '/blog2':
-                render_template('blog2');
-                break;
-            case '/project':
-                render_template('project');
-                break;
-            case '/question':
-                render_template('question');
-                break;
-            case '/blog':
-                render_template('blog');
-                break;
+        case 'blog2':
+            render_template('blog2');
+            break;
+        case 'project':
+            render_template('project');
+            break;
+        case 'question':
+            render_template('question');
+            break;
+        case 'blog':
+            render_template('blog');
+            break;
+        case 'logout':
+            get_render_controller('logout');
+            break;
         default:
         render_template('404');
         break;

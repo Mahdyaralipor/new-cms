@@ -1,10 +1,27 @@
-<?php include(__DIR__ . "/layouts/header.php") ?>
+<?php include(__DIR__ . "/layouts/header.php");
+
+
+$page = explode("/",$_SERVER['REQUEST_URI']);
+$page = end($page);
+$query = connection()->prepare("select * from projects where id = ?");
+$query->bindValue(1,$page);
+$query->execute();
+$detail = $query->fetch();
+
+
+$query = connection()->query("select * from comment where project_id =" . $detail['id']);
+$comments = $query->fetchAll();
+
+
+?>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/build/style.css">
-    <title>جزئیات پروژه</title>
+    <title><?=$detail['name']?></title>
 </head>
 <section class="px-4 mb-24">
         <div class="container mx-auto max-w-screen-xl">
@@ -21,13 +38,13 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                               </svg>
                               
-                            <a href="#" class="mr-1 text-sm font-medium">جزئیات پروژه</a>
+                            <a href="#" class="mr-1 text-sm font-medium"><?=$detail['name']?></a>
                         </div>
                     </li>
                 </ol>
             </nav>  
             <div class="flex flex-col items-center justify-center relative my-16">
-                <h2 class="font-YekanBakh-ExtraBlack text-3xl">جزئیات پروژه</h2>
+                <h2 class="font-YekanBakh-ExtraBlack text-3xl"><?=$detail['name']?></h2>
 
                 <div class="bg-orange-200 w-20 h-1.5 rounded-full absolute top-10"></div>
                 <p class="mt-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
@@ -89,8 +106,7 @@
                       <!-- Tab Content -->
                       <div id="tab1" class="p-4 tab-content rounded-lg">
                         <h2 class="font-YekanBakh-ExtraBold text-2xl mb-4 text-center">توضیحات</h2>
-                        <p>
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.                        </p>
+                        <p><?=$detail['description']?></p>
                       </div>
                       <div id="tab2" class="p-4 tab-content rounded-lg hidden">
                         <h2 class="font-YekanBakh-ExtraBold text-2xl mb-4 text-center">اطلاعات بیشتر</h2>
@@ -152,75 +168,35 @@
                       </div>
                    
                   </div>
-                  <div class="mb-12">
-                    <div class="flex items-center mb-6">
-                       
-                        <div class="mr-2">
-                            <span class="font-IRANSansWeb_Bold bg-orange-200 rounded-full px-4 py-1">مقالات مشابه</span>
-                            <p class="mt-2">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                        </div>
-                    </div>
-                    <div class="swiper sin-project">
-                        <div class="swiper-wrapper ease-linear">
-            
-                        <div class="swiper-slide">
-                          <div class="group/item">
-                            <a class="relative w-full" href="single-project.html">
-                                <div class="overflow-hidden bg-cover bg-no-repeat ">
-                                    <img class="transition duration-300 ease-in-out hover:scale-110 rounded-2xl" src="../assets/images/blog-7.jpg" alt="">
-                                </div>
-                                <div class="absolute bottom-0 w-full text-center text-white bg-gradient-to-t from-stone-800 pt-10 rounded-b-2xl">
-                                    <h2 class="">پروژه شماره یک</h2>
-                                    <p class="opacity-0 group-hover/item:opacity-100 transition-all duration-300 group-hover/item:my-3 text-xs">جهت مشاهده کلیک کنید...</p>
-                                </div>
-                            </a>
-                        </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="group/item">
-                              <a class="relative w-full" href="single-project.html">
-                                  <div class="overflow-hidden bg-cover bg-no-repeat ">
-                                      <img class="transition duration-300 ease-in-out hover:scale-110 rounded-2xl" src="../assets/images/blog-8.jpg" alt="">
-                                  </div>
-                                  <div class="absolute bottom-0 w-full text-center text-white bg-gradient-to-t from-stone-800 pt-10 rounded-b-2xl">
-                                      <h2 class="">پروژه شماره دو</h2>
-                                      <p class="opacity-0 group-hover/item:opacity-100 transition-all duration-300 group-hover/item:my-3 text-xs">جهت مشاهده کلیک کنید...</p>
-                                  </div>
-                              </a>
-                          </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="group/item">
-                              <a class="relative w-full" href="single-project.html">
-                                  <div class="overflow-hidden bg-cover bg-no-repeat ">
-                                      <img class="transition duration-300 ease-in-out hover:scale-110 rounded-2xl" src="../assets/images/blog-10.jpg" alt="">
-                                  </div>
-                                  <div class="absolute bottom-0 w-full text-center text-white bg-gradient-to-t from-stone-800 pt-10 rounded-b-2xl">
-                                      <h2 class="">پروژه شماره سه</h2>
-                                      <p class="opacity-0 group-hover/item:opacity-100 transition-all duration-300 group-hover/item:my-3 text-xs">جهت مشاهده کلیک کنید...</p>
-                                  </div>
-                              </a>
-                          </div>
-                          </div>
-
-                        </div>
-                        <div class="swiper-pagination"></div>
-                      </div>
-                  </div>
+                
                   <div>
+
+                  <?php  foreach($comments as $comment){ ?>
+                      
+                    <div style="margin: 20px;">
+                      <p><?=$comment['comment']?></p>
+                      <hr>
+                    </div>
+
+                  <?php } ?>
+
+
                     <div class="flex items-center mb-6">
-                       
+
+
+                    
+                  
                         <div class="mr-2">
                             <span class="font-IRANSansWeb_Bold bg-orange-200 rounded-full px-4 py-1">نظرات</span>
                             <p class="mt-2">شما با نام یاسمن وارد شده اید!!</p>
                         </div>
                     </div>
                     <form method="post">
+                      <input type="hidden" name="project_id" value="<?=$detail['id']?>">
                     <textarea name="comment" class="textarea textarea-bordered w-full h-36 rounded-3xl" placeholder="نظر خود را بنویسید..."></textarea>
                     <button name="btn" class="btn bg-stone-800 w-36 hover:bg-stone-900 text-white mt-4 rounded-full">ارسال پیام</button>
                     </form>
+                    
               </div>
             </div>
 
