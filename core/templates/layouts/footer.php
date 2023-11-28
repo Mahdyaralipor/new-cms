@@ -18,21 +18,21 @@
                 <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 text-right md:text-center">
                     <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">دسترسی سریع</h3>
                     <ul>
-                        <li><a href="index.html">صفحه اصلی</a></li>
-                        <li><a href="about-us.html">درباره ما</a></li>
-                        <li><a href="contact-us.html">تماس با ما</a></li>
-                        <li><a href="project.html">پروژه ها</a></li>
-                        <li><a href="services.html">خدمات ما</a></li>
+                        <li><a href="/">صفحه اصلی</a></li>
+                        <li><a href="about-us">درباره ما</a></li>
+                        <li><a href="contact-us">تماس با ما</a></li>
+                        <li><a href="project">پروژه ها</a></li>
+                        <li><a href="service">خدمات ما</a></li>
                     </ul>
                 </div>
                 <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-2 text-right md:text-center">
                     <h3 class="font-IRANSansWeb_Bold text-white mb-4 text-base">خدمات شرکت</h3>
                     <ul>
-                        <li><a href="single-page.html">جزئیات وبلاگ</a></li>
-                        <li><a href="single-project.html">جزئیات پروژه</a></li>
-                        <li><a href="manager.html">مدیران</a></li>
-                        <li><a href="faq.html">سوالات متداول</a></li>
-                        <li><a href="404.html">404</a></li>
+                        <li><a href="single-page">جزئیات وبلاگ</a></li>
+                        <li><a href="single-project">جزئیات پروژه</a></li>
+                        <li><a href="manager">مدیران</a></li>
+                        <li><a href="question">سوالات متداول</a></li>
+                        <li><a href="404">404</a></li>
                     </ul>
                 </div>
                 <div class="col-span-12 md:col-span-4 lg:col-span-3">
@@ -48,7 +48,7 @@
   
     <footer class="footer footer-center p-4 bg-stone-700 text-white">
     <div>
-        <p>Copyright © 2023 - تمامی حقوق برای راست چین محفوظ می باشد</p>
+        <p>Copyright © 2023 - تمامی حقوق محفوظ می باشد</p>
     </div>
     </footer>
 

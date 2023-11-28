@@ -13,7 +13,7 @@ function connection (){
     $host = 'localhost';
     $username = 'root';
     $password = '';
-    $database = 'mahdyar';
+    $database = 'project';
     
     try {
     $connection = new PDO("mysql:host=$host;dbname=$database", $username, $password);

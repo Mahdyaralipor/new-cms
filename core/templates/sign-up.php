@@ -1,14 +1,11 @@
-<?php include(__DIR__ . "/layouts/header.php")?>
-<!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<!-- Mirrored from mahdghanon.ir/larin/public/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Nov 2023 06:23:27 GMT -->
+<!-- Mirrored from mahdghanon.ir/larin/public/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Nov 2023 06:23:34 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/build/style.css">
-    <title>ورود</title>
+    <title>ثبت نام</title>
 </head>
 <body class="font-YekanBakh-Regular text-sm bg-[#f5f1e4]">
 
@@ -21,23 +18,20 @@
       
             <div class="max-w-md mx-auto">
               <div>
-
-              <h1 class="text-xl text-center font-YekanBakh-Bold">ورود</h1>
+                <h1 class="text-xl text-center font-YekanBakh-Bold">ثبت نام</h1>
               </div>
               <div class="divide-y divide-gray-200">
                 <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                   <form method="post"> <input type="email" name="username" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
+                  <form method="post">
+                  <input name="username" type="text" placeholder="نام کاربری:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />  
+                  <input type="email" name="email" placeholder="پست الکترونیکی:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
                     <input type="password" name="password" placeholder="رمز عبور:" class="input w-full rounded-full focus:outline-none placeholder:text-sm" />
-                    <button name="btn" class="btn bg-stone-800 w-full hover:bg-stone-900 text-white rounded-full text-sm">ورود</button> </form>
+                    <button name="btn" class="btn bg-stone-800 w-full hover:bg-stone-900 text-white rounded-full text-sm">ثبت نام</button>
+                    </form>
                     <p class="mt-6 text-xs text-gray-600 text-center leading-8">
-                        رمز عبور خود را فراموش کرده اید؟ 
-                        <a href="lost-password" class="border-b border-gray-500 border-dotted">
-                            کلیک کنید.
-                        </a>
-                        <br>
-                        اگر اکانت ندارید
-                        <a href="sign-up" class="border-b border-gray-500 border-dotted">
-                            ثبت نام کنید
+                        قبلا حساب کاربری ساخته اید؟
+                        <a href="login" class="border-b border-gray-500 border-dotted">
+                            وارد شوید.
                         </a>
                     </p>
                 </div>
@@ -55,10 +49,10 @@
         </div>
       </div>
 
-    <script src="../../public/asse"></script>
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="../src/js/main.js"></script>
 </body>
 
-<!-- Mirrored from mahdghanon.ir/larin/public/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Nov 2023 06:23:29 GMT -->
+<!-- Mirrored from mahdghanon.ir/larin/public/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Nov 2023 06:23:34 GMT -->
 </html>
 <?php include(__DIR__ . "/layouts/footer.php") ?>

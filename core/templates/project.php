@@ -1,4 +1,11 @@
 <?php include(__DIR__ . "/layouts/header.php") ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/build/style.css">
+    <title>پروژه ها</title>
+</head>
 <section class="px-4 mb-24">
         <div class="container mx-auto max-w-screen-xl">
             <nav class="flex mb-5 border-y border-orange-200 py-3" aria-label="Breadcrumb">
@@ -31,7 +38,7 @@
 
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 <!-- image - start -->
-                <a href="single-project.html"
+                <a href="single-project"
                     class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-72">
                     <img src="../assets/images/project-30.jpg" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
     
@@ -44,7 +51,7 @@
                 <!-- image - end -->
     
                 <!-- image - start -->
-                <a href="single-project.html"
+                <a href="single-project"
                     class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-72">
                     <img src="../assets/images/blog-2.jpg" loading="lazy" alt="Photo by Magicle" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
     
@@ -57,7 +64,7 @@
                 <!-- image - end -->
     
                 <!-- image - start -->
-                <a href="single-project.html"
+                <a href="single-project"
                     class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-72">
                     <img src="../assets/images/project-31.jpg" loading="lazy" alt="Photo by Martin Sanchez" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
     
@@ -70,7 +77,7 @@
                 <!-- image - end -->
     
                 <!-- image - start -->
-                <a href="single-project.html" class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-72">
+                <a href="single-project" class="group relative flex justify-center h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-72">
                     <img src="../assets/images/blog-4.jpg" class="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-110" />
     
                     <div

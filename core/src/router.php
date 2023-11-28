@@ -17,8 +17,34 @@ function route_request() {
             render_controller('contact-us');
             render_template('contact-us');
             break;
-            case '/login':
-                render_template('login');
+        case '/404':
+            render_template('404');
+            break;
+        case '/single-project':
+            render_controller('single-project');
+            render_template('single-project');
+            break;
+        case '/single-page':
+            render_controller('single-page');
+            render_template('single-page');
+            break;
+        case '/sign-up':
+            render_controller('sign-up');
+            render_template('sign-up');
+            break;
+        case '/login':
+            render_controller('login');
+            render_template('login');
+            break;
+        case '/lost-password':
+            render_controller('lost-password');
+            render_template('lost-password');
+            break;
+        case '/manager':
+            render_template('manager');
+            break;
+            case '/blog2':
+                render_template('blog2');
                 break;
             case '/project':
                 render_template('project');
@@ -30,8 +56,7 @@ function route_request() {
                 render_template('blog');
                 break;
         default:
-            header('HTTP/1.0 404 Not Found');
-            echo '404 Not Found';
-            break;
+        render_template('404');
+        break;
     }
 }

@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/node_modules/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/assets/build/style.css">
-    <title>صفحه اصلی</title>
-</head>
 <body class="font-YekanBakh-Regular text-sm bg-[#f5f1e4]">
 
     <section class="px-4 static">
@@ -41,12 +34,12 @@
                                 </svg>
                               </label> 
                             </div> 
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="index.html">صفحه اصلی</a></li>
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="services.html">خدمات</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="service">خدمات</a></li>
                             <li><details>
-                                <summary><a href="project.html">پروژه ها</a></summary>
+                                <summary><a href="project">پروژه ها</a></summary>
                                 <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                                  <li><a href="blog-2.html">وبلاگ دمو دوم</a></li>
+                                  <li><a href="blog2">وبلاگ دمو دوم</a></li>
                                   <li><a>جزئیات پروژه</a></li>
                                   <li>
                                     <details>
@@ -59,26 +52,26 @@
                                   </li>
                                 </ul>
                             </details></li>
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="faq.html">سوالات متداول</a></li>
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog.html">وبلاگ</a></li>
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us.html">درباره ما</a></li>
-                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us.html">تماس با ما</a></li>
-                        </ul>
-                      </div>
-                  </div>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="question">سوالات متداول</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
+                            <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
+                          </ul>
+                          </div>
+                        </div>
             </div>
               <div class="flex items-center gap-8">
                 <div>
-                    <a href="index.html"><img src="../assets/images/logo.png" alt=""></a>
+                    <a href="/"><img src="../assets/images/logo.png" alt=""></a>
                 </div>
                 <div class="hidden lg:block">
                     <ul class="flex menu lg:menu-horizontal">
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="index.html">صفحه اصلی</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="services.html">خدمات</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="/">صفحه اصلی</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="service">خدمات</a></li>
                         <li><details>
-                            <summary><a href="project.html">پروژه ها</a></summary>
+                            <summary><a href="project">پروژه ها</a></summary>
                             <ul class="p-2 z-10 w-48 bg-[#f5f1e4] m-0">
-                              <li><a href="blog-2.html">وبلاگ دمو دوم</a></li>
+                              <li><a href="blog2">وبلاگ دمو دوم</a></li>
                               <li><a>جزئیات پروژه</a></li>
                               <li>
                                 <details>
@@ -91,15 +84,15 @@
                               </li>
                             </ul>
                         </details></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="faq.html">سوالات متداول</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog.html">وبلاگ</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us.html">درباره ما</a></li>
-                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us.html">تماس با ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="question">سوالات متداول</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="blog">وبلاگ</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="about-us">درباره ما</a></li>
+                        <li><a class="hover:border-b hover:border-orange-200 pb-1 duration-300" href="contact-us">تماس با ما</a></li>
                     </ul>
                 </div>
               </div>
                 <div class="border bg-stone-900 text-orange-200 hover:bg-orange-200 hover:text-stone-900 duration-300 rounded-full">
-                    <a href="login.html" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
+                    <a href="login" class="flex py-2.5 px-7 rounded-full font-YekanBakh-Regular">ورود | ثبت نام</a>
                 </div>
         
             </div>
